@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{{ form.as_p }}
+<form method="POST">
+	<input type="text" name="title" placeholder="Your search" />
+	<input type="submit" value="Save" />
+</form>
+
+
+
+
+
+{% endblock %}

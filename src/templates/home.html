@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Hello World</h1>
+<p>This is a template</p>
+
+<ul>
+{% for my_sub_item in my_list %}
+	{% if my_sub_item == True %}
+		<li>Na pozycji nr: {{ forloop.counter }} znajduje się moja wartość: {{ my_sub_item }}</li>
+	{% endif %}
+{% endfor %}
+
+{% lorem 3 p random %}
+</ul>
+{% endblock %}
