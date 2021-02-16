@@ -1,15 +1,9 @@
-{% extends 'base.html' %}
-
+{% extends "base.html" %}
 {% block content %}
-
+<form action="." method="POST">
+{% csrf_token %}
 {{ form.as_p }}
-<form method="POST">
-	<input type="text" name="title" placeholder="Your search" />
+ 	
 	<input type="submit" value="Save" />
 </form>
-
-
-
-
-
 {% endblock %}
