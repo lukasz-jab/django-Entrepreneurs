@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{object_list}}
+{% for product in object_list %}
+	<ul>
+	<li>Product id {{product.id}} LINK: <a href="/product/{{product.id}}/">Click me</a></li>
+	<li>Product name ({{product.title}})</li>
+	{% if product.description == "" or None %}
+		<li>Brak opisu</li>
+	{% else %}
+		<li>Product description {{product.description}}</li>
+	{% endif %}
+	<li>Product price ({{product.price}})</li></ul>
+	{% endfor %}
+{% endblock %}
