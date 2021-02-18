@@ -4,7 +4,7 @@
 {{object_list}}
 {% for product in object_list %}
 	<ul>
-	<li>Product id {{product.id}} LINK: <a href="/product/{{product.id}}/">Click me</a></li>
+	<li>Product id {{product.id}} LINK: <a href="{{ product.get_absolute_url }}">Click me</a></li>
 	<li>Product name ({{product.title}})</li>
 	{% if product.description == "" or None %}
 		<li>Brak opisu</li>

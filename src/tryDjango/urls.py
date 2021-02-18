@@ -29,9 +29,9 @@ urlpatterns = [
     #path('', home_view, name='home'),
     path('home/', home_view, name='home'),
     path('product/<int:my_id>/', dynamic_lookup_view, name='product'),
-    path('product/', product_detail_view),
-    path('contact/', contact_view),
-    path('create/', product_create_view),
-    path('product/<int:my_id>/delete/', product_delete_view),
-    path('list/', product_list_view)
+    path('product/', product_detail_view, name='detail'),
+    path('contact/', contact_view, name='contact'),
+    path('create/', product_create_view, name='create'),
+    path('product/<int:my_id>/delete/', product_delete_view, name='delete'),
+    path('list/', product_list_view, name='list')
 ]
